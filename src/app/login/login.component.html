@@ -1,0 +1,23 @@
+<mat-toolbar color="primary"><span><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>  CMT Hackathon</span></mat-toolbar>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
+<div fxLayoutAlign="center center"  class="main-div">
+  
+    <mat-card fxFlex="20"> 
+        <mat-toolbar color="primary">Login Page</mat-toolbar>
+        <form  fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="submitForm()">
+          <mat-form-field >
+            <input matInput placeholder="UserName" name="userName" formControlName="userName">
+          </mat-form-field>
+        
+          <mat-form-field >
+              <input matInput type="password" placeholder="Password" formControlName="password" name="password">
+          </mat-form-field>
+          <mat-error *ngIf="loginerror">Incorrect Credentials</mat-error>
+          <button mat-raised-button type="submit" >Login</button>
+          <br>
+          <button mat-raised-button type="button" color="accent" (click)="goToRegister()" >Register</button>
+          </form>
+    </mat-card>
+</div>

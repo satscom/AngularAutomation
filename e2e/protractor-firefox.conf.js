@@ -14,8 +14,8 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    browserName: 'chrome',
-    'chromeOptions':{
+    browserName: 'firefox',
+    'moz:firefoxOptions':{
        args:['--start-maximized']
     }
   },
@@ -24,7 +24,7 @@ exports.config = {
 
   localSeleniumStandaloneOpts:{
     port:4444,
-    jvmArgs:['-Dwebdriver.chrome.driver-./node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_85.0.4183.87']
+    jvmArgs:['-Dwebdriver.gecko.driver-./node_modules/protractor/node_modules/webdriver-manager/selenium/geckodriver-v0.27.0']
   },
 
   directConnect: false,
